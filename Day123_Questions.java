@@ -1,6 +1,6 @@
 package algo.day1.day2.day3;
 
-public class Day123_Questions {
+public class Day123_Questions {//gg
 	
 	public Day123_Questions() {}
 	
