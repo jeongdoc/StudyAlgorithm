@@ -27,7 +27,6 @@ public class Day456_Questions {
 		System.out.println("\n역순 정렬을 마쳤습니다.");
 		
 		return a;
-		
 	}
 	public static int sumOf(int[] a) {
 		
