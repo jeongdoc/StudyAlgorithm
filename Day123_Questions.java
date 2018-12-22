@@ -106,6 +106,35 @@ public class Day123_Questions {//gg
 			System.out.println();
 		}
 	}
-
+		//2018.12.18 Day3
+	public void nPira(int n) {
+		
+		for(int x = 0; x < n; x ++) {
+			for(int y = 0; y < n - x; y ++) {
+				System.out.print(" ");
+			}
+			for(int y = 0; y <= x; y ++) {
+				System.out.print(x + 1);
+			}
+			for(int y = 1; y <= x; y ++) {
+				System.out.print(x + 1);
+			}
+			System.out.println();
+		}
+	}	
+	public void sPira(int n) {
+		for(int x = 0; x < n; x ++) {
+			for(int y = 0; y < n - x; y ++) {
+				System.out.print(" ");
+			}
+			for(int y = 0; y <= x; y ++) {
+				System.out.print("*");
+			}
+			for(int y = 1; y <= x; y ++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
 
 }
