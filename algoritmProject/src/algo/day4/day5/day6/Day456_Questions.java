@@ -1,6 +1,7 @@
 package algo.day4.day5.day6;
 
 public class Day456_Questions { 
+	//2018.12.21 
 	public int[] deArray() {
 		int []a = {5, 10, 73, 2, -5, 42};
 		int x = 0;
@@ -10,7 +11,7 @@ public class Day456_Questions {
 			for(int i : a) {
 				System.out.print(i + " ");
 			}
-			System.out.println("\na[" + x + "]¿Í(°ú) " + "a[" + y + "]À»(¸¦) ±³È¯ÇÕ´Ï´Ù. ");
+			System.out.println("\na[" + x + "]ì™€(ê³¼) " + "a[" + y + "]ì„(ë¥¼) êµí™˜í•©ë‹ˆë‹¤. ");
 			
 				int temp = a[x];
 				a[x] = a[y];
@@ -23,7 +24,7 @@ public class Day456_Questions {
 		for(int ii : a) {
 			System.out.print(ii + " ");
 		}
-		System.out.println("\n¿ª¼ø Á¤·ÄÀ» ¸¶ÃÆ½À´Ï´Ù.");
+		System.out.println("\nì—­ìˆœ ì •ë ¬ì„ ë§ˆì³¤ìŠµë‹ˆë‹¤.");
 		
 		return a;
 		
