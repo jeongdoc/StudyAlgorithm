@@ -15,21 +15,21 @@ public class BoardManager {
 		{
 			list = (ArrayList<Board>) save.readObject();
 		} catch(Exception e) {
-			System.out.println("ÇÁ·Î±×·¥À» ½ÃÀÛÇÕ´Ï´Ù.");
+			System.out.println("í”„ë¡œê·¸ë¨ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
 		}
 	}
 	
 	public void writeBoard() {
-		System.out.println("»õ °Ô½Ã±Û ¾²±âÀÔ´Ï´Ù.");
-		System.out.print("\n±ÛÁ¦¸ñ : ");
+		System.out.println("ìƒˆ ê²Œì‹œê¸€ ì“°ê¸°ì…ë‹ˆë‹¤.");
+		System.out.print("\nê¸€ì œëª© : ");
 		String title = sc.nextLine();
 		
-		System.out.print("ÀÛ¼ºÀÚ : ");
+		System.out.print("ì‘ì„±ì : ");
 		String author = sc.next();
 		
 		Date d = new Date();
 		
-		System.out.println("±Û³»¿ë ÀÔ·Â ¦¡¦¡¦¡ ");
+		System.out.println("ê¸€ë‚´ìš© ì…ë ¥ â”€â”€â”€ ");
 		String text = null;
 		StringBuilder builder = new StringBuilder();
 		while(!(text = sc.nextLine()).toLowerCase().equals("exit")) {
@@ -46,7 +46,7 @@ public class BoardManager {
 	}
 	
 	public void displayBoard() {
-		System.out.print("Á¶È¸ÇÒ ±Û ¹øÈ£ : ");
+		System.out.print("ì¡°íšŒí•  ê¸€ ë²ˆí˜¸ : ");
 		int bNo = sc.nextInt();
 
 		int index = 0;
@@ -59,23 +59,23 @@ public class BoardManager {
 		}
 	}
 	public void modifyTitle() {
-		System.out.print("¼öÁ¤ÇÒ ±Û ¹øÈ£ : ");
+		System.out.print("ìˆ˜ì •í•  ê¸€ ë²ˆí˜¸ : ");
 		int bNo = sc.nextInt();
 
 		int index = 0;
 		while(index < list.size()) {
 			if(list.get(index).getBoardNo() == bNo) {
-				System.out.print("»õ Á¦¸ñ ÀÔ·Â : ");
+				System.out.print("ìƒˆ ì œëª© ì…ë ¥ : ");
 				sc.nextLine();
 				String title = sc.nextLine();
 				list.get(bNo).setBoardTitle(title);
-				System.out.println(bNo + "¹ø °Ô½Ã±Û Á¦¸ñÀÌ º¯°æµÇ¾ú½À´Ï´Ù!");
+				System.out.println(bNo + "ë²ˆ ê²Œì‹œê¸€ ì œëª©ì´ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤!");
 			}
 			index ++;
 		}
 	}
 	public void modifyContent() {
-		System.out.print("¼öÁ¤ÇÒ ±Û ¹øÈ£ : ");
+		System.out.print("ìˆ˜ì •í•  ê¸€ ë²ˆí˜¸ : ");
 		int bNo = sc.nextInt();
 		
 		StringBuilder builder = new StringBuilder();
@@ -84,55 +84,54 @@ public class BoardManager {
 		while(index < list.size()) {
 			if(list.get(index).getBoardNo() == bNo) {
 				list.get(bNo);
-				System.out.println("º¯°æÇÒ ³»¿ë ¦¡¦¡¦¡ ");
+				System.out.println("ë³€ê²½í•  ë‚´ìš© â”€â”€â”€ ");
 				while(!(change = sc.nextLine()).equals("exit")) {
 						builder.append(change + "\n");
 					}
 					list.get(bNo).setBoardContent(builder.toString());
-					System.out.println("º¯°æÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù!");
+					System.out.println("ë³€ê²½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤!");
 				}
 			index ++;
 		}
 	}
 	public void deleteBoard() {
-		System.out.print("»èÁ¦ÇÒ ±Û ¹øÈ£ : ");
+		System.out.print("ì‚­ì œí•  ê¸€ ë²ˆí˜¸ : ");
 		int bNo = sc.nextInt();
 		
 		int index = 0;
 		while(index < list.size()) {	
 			if(list.get(index).getBoardNo() == bNo) {
 				list.get(bNo);
-				System.out.println("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? (y/n)");
+				System.out.println("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n)");
 				if( (sc.next().toLowerCase().charAt(0) == 'y')) { 
 							list.remove(list.get(index));
 				}
-				System.out.println(index + "¹ø ±ÛÀ» »èÁ¦ÇÏ¿´½À´Ï´Ù.");
+				System.out.println(index + "ë²ˆ ê¸€ì„ ì‚­ì œí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}			
 			index ++;
 		}
 		
-		System.out.println("¸Ş´º·Î µ¹¾Æ°©´Ï´Ù.");
+		System.out.println("ë©”ë‰´ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
 	}
 	public void searchBoard() {
-		System.out.print("°Ë»öÇÒ Á¦¸ñ : ");
-		String bTitle = sc.nextLine();
-    	System.out.println();
+		System.out.print("ê²€ìƒ‰í•  ì œëª© : ");
+    		String sTitle = sc.nextLine().toLowerCase().toUpperCase();
     	
-    	int index = 0;
-    	while(index < list.size()) {
-    		if(bTitle.equals(list.get(index).getBoardTitle())) {
-    			System.out.println("< °Ë»ö °á°ú >");
-    			System.out.println(list.get(index));
+    		int index = 0;
+    		while(index < list.size()) {
+    			if(list.get(index).getBoardTitle().contains(sTitle)) {
+    				System.out.println("< ê²€ìƒ‰ ê²°ê³¼ >");
+    				System.out.println(list.get(index));
     			}
-    		index ++;
-    	}
+    			index ++;
+    		}
 	}
 	public void saveListFile() {
 		String fn = "board_list.dat";
     	try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fn));)
     	{  		
     		oos.writeObject(list);
-    		System.out.println(fn + " ¿¡ ¼º°øÀûÀ¸·Î ÀúÀåµÇ¾ú½À´Ï´Ù!");
+    		System.out.println(fn + " ì— ì„±ê³µì ìœ¼ë¡œ ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤!");
     		
     	} catch(IOException e) {
     		e.printStackTrace();
