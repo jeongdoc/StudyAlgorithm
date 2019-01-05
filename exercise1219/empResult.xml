@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>보너스포인트적용연봉</comment>
+<entry key="20130412">20130412, 홍길동, 기획부, 38000000, 0.2, 45600000</entry>
+<entry key="12034920">12034920, 박효순, 총무부, 42000000, 0.3, 54600000</entry>
+<entry key="51003920">51003920, 박희순, 영업부, 32000000, 0.2, 38400000</entry>
+<entry key="39003850">39003850, 김필동, 영업부, 26000000, 0.1, 28600000</entry>
+<entry key="30324011">30324011, 최수석, 개발부, 35200000, 0.15, 40480000</entry>
+</properties>
