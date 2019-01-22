@@ -9,36 +9,19 @@ import java.util.Date;
 public class Bank implements Serializable{
 	private static final long serialVersionUID = 8593248819464369424L;
 	
-	private int bNo = 0;			//ÅëÀå°íÀ¯¹øÈ£ key°ª
-	private String userName;	//ÀÌ¸§
-	private char gender;		//¼ºº°
-	private int age;			//³ªÀÌ
-	private String bNumber;		//°èÁÂ¹øÈ£
-	private int price;			//±İ¾×
-	private Date openDate;		//ÅëÀå°³¼³³¯Â¥
+	private int bNo = 0;			//í†µì¥ê³ ìœ ë²ˆí˜¸ keyê°’
+	private String userName;	//ì´ë¦„
+	private char gender;		//ì„±ë³„
+	private int age;			//ë‚˜ì´
+	private String bNumber;		//ê³„ì¢Œë²ˆí˜¸
+	private int price;			//ê¸ˆì•¡
+	private Date openDate;		//í†µì¥ê°œì„¤ë‚ ì§œ
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy'.'MM'.'dd");
 	private NumberFormat comma = NumberFormat.getInstance();
 	
 	
 	public Bank() {
-		super();
 		
-	}
-	public Bank(String userName, String bNumber, int price, Date openDate) {
-		super();
-		this.userName = userName;
-		this.bNumber = bNumber;
-		this.price = price;
-		this.openDate = openDate;
-	}
-	public Bank(String userName, char gender, int age, String bNumber, int price, Date openDate) {
-		super();
-		this.userName = userName;
-		this.gender = gender;
-		this.age = age;
-		this.bNumber = bNumber;
-		this.price = price;
-		this.openDate = openDate;
 	}
 	public Bank(int bNo, String userName, char gender, int age, String bNumber, int price, Date openDate) {
 		super();
@@ -117,19 +100,19 @@ public class Bank implements Serializable{
 	@Override
 	public String toString () {
 		StringBuffer buf = new StringBuffer();
-		buf.append("*°èÁÂ¹øÈ£ : ");
+		buf.append("*ê³„ì¢Œë²ˆí˜¸ : ");
 		buf.append(this.bNumber + "\n");
-		buf.append("*¿¹±İÁÖ : ");
+		buf.append("*ì˜ˆê¸ˆì£¼ : ");
 		buf.append(this.userName + "\n");
-		buf.append("*ÀÜ¾× : ");
+		buf.append("*ì”ì•¡ : ");
 		buf.append(comma.format(this.price) + "\n");
-		buf.append("*ÅëÀå°³¼³ÀÏ : ");
+		buf.append("*í†µì¥ê°œì„¤ì¼ : ");
 		buf.append(getOpenDate());
 		
-		return /*"°èÁÂ¹øÈ£ : " + this.bNumber +
-				 "  \n¿¹±İÁÖ¸í : " + this.userName +
-				  "\nÀÜ¾× : " + this.price +
-			   " \nÅëÀå °³¼³ÀÏ : " + this.openDate;*/
+		return /*"ê³„ì¢Œë²ˆí˜¸ : " + this.bNumber +
+				 "  \nì˜ˆê¸ˆì£¼ëª… : " + this.userName +
+				  "\nì”ì•¡ : " + this.price +
+			   " \ní†µì¥ ê°œì„¤ì¼ : " + this.openDate;*/
 				buf.toString();
 	}
 }
