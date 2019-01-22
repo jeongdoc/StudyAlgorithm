@@ -17,13 +17,13 @@ public class SaveAccount {
 	Scanner sc = new Scanner(System.in);
 	//private Bank b = new Bank();
 	public SaveAccount() {
-		System.out.println("<< °í°´ ÆÄÀÏÀ» ºÒ·¯¿É´Ï´Ù. >>\n");
+		System.out.println("<< ê³ ê° íŒŒì¼ì„ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤. >>\n");
 		
 		try {
 			pr.loadFromXML(new FileInputStream(fName));
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("°èÁÂ¸¦ ¸ÕÀú ¸¸µé¾îÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println("ê³„ì¢Œë¥¼ ë¨¼ì € ë§Œë“¤ì–´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -35,14 +35,14 @@ public class SaveAccount {
 		pR.setProperty(String.valueOf(b.getbNo()), b.toString());
 		//pr.list(System.out);
 		try {
-			pr.storeToXML(new FileOutputStream(fName), "°í°´Á¤º¸");
+			pr.storeToXML(new FileOutputStream(fName), "ê³ ê°ì •ë³´");
 			
-			System.out.print("°í°´ Á¤º¸¸¦ ÀúÀåÇÒ ÆÄÀÏ ÀÌ¸§ : ");
+			System.out.print("ê³ ê° ì •ë³´ë¥¼ ì €ì¥í•  íŒŒì¼ ì´ë¦„ : ");
 			String fName2 = sc.next();
-			pR.storeToXML(new FileOutputStream(fName2 + ".xml"), "ÅëÀåÁ¤º¸");
+			pR.storeToXML(new FileOutputStream(fName2 + ".xml"), "í†µì¥ì •ë³´");
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("°èÁÂ¸¦ »ı¼ºÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println("ê³„ì¢Œë¥¼ ìƒì„±í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -58,7 +58,7 @@ public class SaveAccount {
 			pR.loadFromXML(new FileInputStream(fn+".xml"));
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("°èÁÂ¸¦ ¸ÕÀú ¸¸µé¾îÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println("ê³„ì¢Œë¥¼ ë¨¼ì € ë§Œë“¤ì–´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -68,35 +68,20 @@ public class SaveAccount {
 	public void bankDeposit(Properties p) {
 		System.out.println("=== KH Bank ===");
 		try {
-			System.out.print("º¯°æ»çÇ× ÀúÀåÇÒ °í°´ÀÇ ÆÄÀÏ : ");
+			System.out.print("ë³€ê²½ì‚¬í•­ ì €ì¥í•  ê³ ê°ì˜ íŒŒì¼ : ");
 			String fn = sc.next();
 			if(fn.equals(fn)) {
 				//p.loadFromXML(new FileInputStream(fName + ".xml"));
-				p.storeToXML(new FileOutputStream(fn + ".xml"), "ÅëÀåÁ¤º¸");
-				p.storeToXML(new FileOutputStream(fName), "°í°´Á¤º¸");
+				p.storeToXML(new FileOutputStream(fn + ".xml"), "í†µì¥ì •ë³´");
+				p.storeToXML(new FileOutputStream(fName), "ê³ ê°ì •ë³´");
 			}
-			System.out.println("ÀÔ±İÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì…ê¸ˆì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("°í°´ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ê³ ê° ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (IOException e) {
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
-		
-		/*for(Map.Entry<Object, Object> o : p.entrySet()) {
-			System.out.println(o.getKey() + " " + o.getValue() + "\n");
-		}
-		
-		try {
-				p.storeToXML(new FileOutputStream(fName + ".xml"), "ÅëÀåÁ¤º¸");
-			}
-			System.out.println("ÀÔ±İÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾ú½À´Ï´Ù.");
-			
-		} catch (FileNotFoundException e) {
-			System.out.println("°í°´ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
-		} catch (IOException e) {
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
-		}*/
 	}
 
 }
