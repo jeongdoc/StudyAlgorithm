@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>통장정보</comment>
+<entry key="2">*계좌번호 : Hermione
+*예금주 : Hermione
+*잔액 : 150,400
+*통장개설일 : 2019.01.23</entry>
+</properties>

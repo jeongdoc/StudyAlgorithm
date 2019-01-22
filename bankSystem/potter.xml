@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>통장정보</comment>
+<entry key="3">*계좌번호 : KHbank-00003
+*예금주 : Harry
+*잔액 : 80,000
+*통장개설일 : 2019.01.23</entry>
+</properties>
