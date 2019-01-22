@@ -71,7 +71,6 @@ public class SaveAccount {
 			System.out.print("변경사항 저장할 고객의 파일 : ");
 			String fn = sc.next();
 			if(fn.equals(fn)) {
-				//p.loadFromXML(new FileInputStream(fName + ".xml"));
 				p.storeToXML(new FileOutputStream(fn + ".xml"), "통장정보");
 				p.storeToXML(new FileOutputStream(fName), "고객정보");
 			}
