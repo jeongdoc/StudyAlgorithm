@@ -109,11 +109,7 @@ public class Bank implements Serializable{
 		buf.append("*통장개설일 : ");
 		buf.append(getOpenDate());
 		
-		return /*"계좌번호 : " + this.bNumber +
-				 "  \n예금주명 : " + this.userName +
-				  "\n잔액 : " + this.price +
-			   " \n통장 개설일 : " + this.openDate;*/
-				buf.toString();
+		return 	buf.toString();
 	}
 }
 
