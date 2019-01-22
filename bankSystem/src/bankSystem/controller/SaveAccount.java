@@ -15,7 +15,7 @@ public class SaveAccount {
 	private Properties pR = new Properties();
 	private static final String fName = "customer.xml";
 	Scanner sc = new Scanner(System.in);
-	//private Bank b = new Bank();
+	
 	public SaveAccount() {
 		System.out.println("<< 고객 파일을 불러옵니다. >>\n");
 		
@@ -30,7 +30,6 @@ public class SaveAccount {
 	}
 	
 	public void saveAcc(Bank b) {
-		//Properties pR = new Properties();
 		pr.setProperty(String.valueOf(b.getbNo()), b.toString());
 		pR.setProperty(String.valueOf(b.getbNo()), b.toString());
 		//pr.list(System.out);
