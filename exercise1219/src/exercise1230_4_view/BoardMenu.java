@@ -16,44 +16,44 @@ public class BoardMenu {
 		int menu = 0;
 		
 		do {
-		System.out.println("******** °Ô½Ã±Û ¼­ºñ½º ÇÁ·Î±×·¥ ********");
-		System.out.println("\n1. °Ô½Ã±Û ¾²±â" + "\n2. °Ô½Ã±Û ÀüÃ¼ º¸±â");
-		System.out.println("3. °Ô½Ã±Û ÇÑ °³ º¸±â" + "\n4. °Ô½Ã±Û Á¦¸ñ ¼öÁ¤");
-		System.out.println("5. °Ô½Ã±Û ³»¿ë ¼öÁ¤" + "\n6. °Ô½Ã±Û »èÁ¦");
-		System.out.println("7. °Ô½Ã±Û °Ë»ö" + "\n8. ÆÄÀÏ¿¡ ÀúÀåÇÏ±â");
-		System.out.println("9. Á¤·ÄÇÏ±â" + "\n10. ³¡³»±â");
+		System.out.println("******** ê²Œì‹œê¸€ ì„œë¹„ìŠ¤ í”„ë¡œê·¸ë¨ ********");
+		System.out.println("\n1. ê²Œì‹œê¸€ ì“°ê¸°" + "\n2. ê²Œì‹œê¸€ ì „ì²´ ë³´ê¸°");
+		System.out.println("3. ê²Œì‹œê¸€ í•œ ê°œ ë³´ê¸°" + "\n4. ê²Œì‹œê¸€ ì œëª© ìˆ˜ì •");
+		System.out.println("5. ê²Œì‹œê¸€ ë‚´ìš© ìˆ˜ì •" + "\n6. ê²Œì‹œê¸€ ì‚­ì œ");
+		System.out.println("7. ê²Œì‹œê¸€ ê²€ìƒ‰" + "\n8. íŒŒì¼ì— ì €ì¥í•˜ê¸°");
+		System.out.println("9. ì •ë ¬í•˜ê¸°" + "\n10. ëë‚´ê¸°");
 		
-		System.out.print("\n¸Ş´º ¹øÈ£ ¼±ÅÃ : ");
+		System.out.print("\në©”ë‰´ ë²ˆí˜¸ ì„ íƒ : ");
 		menu = sc.nextInt();
 		
 		switch(menu) {
 		case 1 : b.writeBoard(); 		break;
-		case 2 : b.displayAllList(); 	break;
+		case 2 : b.displayAllList(); 		break;
 		case 3 : b.displayBoard(); 		break;
 		case 4 : b.modifyTitle(); 		break;
-		case 5 : b.modifyContent(); 	break;
+		case 5 : b.modifyContent(); 		break;
 		case 6 : b.deleteBoard(); 		break;
 		case 7 : b.searchBoard(); 		break;
 		case 8 : b.saveListFile(); 		break;
 		case 9 : sortSubMenu(); 		break;
-		case 10 : System.out.println("Á¾·áÇÕ´Ï´Ù.");
+		case 10 : System.out.println("ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				return;
-			default : System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ¸Ş´º ¹øÈ£¸¦ ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.");
+			default : System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë©”ë‰´ ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”.");
 			}
 		} while(true);
 	}
 	public void sortSubMenu() {
 		int menu = 0;
 		do {
-			System.out.println("****** °Ô½Ã±Û Á¤·Ä ¸Ş´º ******");
-			System.out.println("1. ±Û¹øÈ£¼ø ¿À¸§Â÷¼ø Á¤·Ä");
-			System.out.println("2. ±Û¹øÈ£¼ø ³»¸²Â÷¼ø Á¤·Ä");
-			System.out.println("3. ÀÛ¼º³¯Â¥¼ø ¿À¸§Â÷¼øÁ¤·Ä");
-			System.out.println("4. ÀÛ¼º³¯Â¥¼ø ³»¸²Â÷¼ø Á¤·Ä");
-			System.out.println("5. ±ÛÁ¦¸ñ¼ø ¿À¸§Â÷¼ø Á¤·Ä");
-			System.out.println("6. ±ÛÁ¦¸ñ¼ø ³»¸²Â÷¼ø Á¤·Ä");
-			System.out.println("7. ÀÌÀü ¸Ş´º·Î ÀÌµ¿");
-			System.out.print("\n¸Ş´º ¹øÈ£ ¼±ÅÃ : ");
+			System.out.println("****** ê²Œì‹œê¸€ ì •ë ¬ ë©”ë‰´ ******");
+			System.out.println("1. ê¸€ë²ˆí˜¸ìˆœ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬");
+			System.out.println("2. ê¸€ë²ˆí˜¸ìˆœ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬");
+			System.out.println("3. ì‘ì„±ë‚ ì§œìˆœ ì˜¤ë¦„ì°¨ìˆœì •ë ¬");
+			System.out.println("4. ì‘ì„±ë‚ ì§œìˆœ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬");
+			System.out.println("5. ê¸€ì œëª©ìˆœ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬");
+			System.out.println("6. ê¸€ì œëª©ìˆœ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬");
+			System.out.println("7. ì´ì „ ë©”ë‰´ë¡œ ì´ë™");
+			System.out.print("\në©”ë‰´ ë²ˆí˜¸ ì„ íƒ : ");
 			menu = sc.nextInt();
 			
 			switch(menu) {
@@ -63,9 +63,9 @@ public class BoardMenu {
 			case 4 : b.sortList(2, true);		break;
 			case 5 : b.sortList(3, false);		break;
 			case 6 : b.sortList(3, true);		break;
-			case 7 : System.out.println("ÀÌÀü ¸Ş´º·Î µ¹¾Æ°©´Ï´Ù.");
+			case 7 : System.out.println("ì´ì „ ë©”ë‰´ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
 					return;
-				default : System.out.println("¸Ş´º ¹øÈ£¸¦ ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.");
+				default : System.out.println("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”.");
 			}
 		} while(true);
 	}
