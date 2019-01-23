@@ -168,9 +168,8 @@ public class BankManager {
 				for(String w : sar) {
 					System.out.println(money + "원 출금하셨습니다.");
 					String str = sar[8].replaceAll(",", "");
+					
 					int x = Integer.parseInt(str) - money;
-				    
-					String totalCash = String.valueOf(x);
 					int keyies = Integer.parseInt(absoluteKey);
 					
 					bStart.setPrice(x);
