@@ -15,54 +15,54 @@ public class BankManager {
 	private SaveAccount save = new SaveAccount();
 	
 	private Scanner sc = new Scanner(System.in);
-	private static int bNum = 0; //°èÁÂ°ü¸® ÀÚµ¿ºÎ¿©
-	private static int bNum2 = 0; // °íÀ¯¹øÈ£ ÀÚµ¿ºÎ¿©
+	private static int bNum = 0; //ê³„ì¢Œê´€ë¦¬ ìë™ë¶€ì—¬
+	private static int bNum2 = 0; // ê³ ìœ ë²ˆí˜¸ ìë™ë¶€ì—¬
 	private static final String n = "KHbank-";
 	
 	public void mainMenu() {
 		boolean start = true;
 		while(start) {
-			System.out.println("====== ÅëÀå °³¼³ ½Ã½ºÅÛ ======");
-			System.out.println("1. »õ °èÁÂ »ı¼º "
-							 + "\n2. ÀüÃ¼ °èÁÂ Á¶È¸"
-							 + "\n3. Æ¯Á¤ °èÁÂ Á¶È¸"
-							 + "\n4. ÀÔ±İ"
-							 + "\n5. Ãâ±İ"
-							 + "\n6. °èÁÂÀÌÃ¼"
-							 + "\n7. ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("====== í†µì¥ ê°œì„¤ ì‹œìŠ¤í…œ ======");
+			System.out.println("1. ìƒˆ ê³„ì¢Œ ìƒì„± "
+							 + "\n2. ì „ì²´ ê³„ì¢Œ ì¡°íšŒ"
+							 + "\n3. íŠ¹ì • ê³„ì¢Œ ì¡°íšŒ"
+							 + "\n4. ì…ê¸ˆ"
+							 + "\n5. ì¶œê¸ˆ"
+							 + "\n6. ê³„ì¢Œì´ì²´"
+							 + "\n7. í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 			
-			System.out.print("\n¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä : ");
+			System.out.print("\në©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš” : ");
 			int chooseMenu = sc.nextInt();
 			
 			switch(chooseMenu) {
-			case 1 : bankInsert(); 		break; //°èÁÂ°³¼³
-			case 2 : bankAllPrint(); 	break; //ÀüÃ¼Á¶È¸
-			case 3 : bankSearch(); 		break; //ºÎºĞÁ¶È¸
-			case 4 : bankDeposit(); 	break; //ÀÔ±İ
-			case 5 : bankWithdrawal(); 	break; //Ãâ±İ
-			case 6 : bankAccTransfer(); break; //°èÁÂÀÌÃ¼
+			case 1 : bankInsert(); 		break; //ê³„ì¢Œê°œì„¤
+			case 2 : bankAllPrint(); 	break; //ì „ì²´ì¡°íšŒ
+			case 3 : bankSearch(); 		break; //ë¶€ë¶„ì¡°íšŒ
+			case 4 : bankDeposit(); 	break; //ì…ê¸ˆ
+			case 5 : bankWithdrawal(); 	break; //ì¶œê¸ˆ
+			case 6 : bankAccTransfer(); break; //ê³„ì¢Œì´ì²´
 			case 7 : start = false; 	break;
-				default : System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				default : System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			}
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 	
 	public void bankInsert() {
-		//°èÁÂ¹øÈ£ ÀÚµ¿ÇÒ´ç
+		//ê³„ì¢Œë²ˆí˜¸ ìë™í• ë‹¹
 		String account = n + String.format(new DecimalFormat("00000").format(++bNum));	
 		
 		
-		System.out.print("°í°´ÀÌ¸§ : ");
+		System.out.print("ê³ ê°ì´ë¦„ : ");
 		String name = sc.next();
 		
-		System.out.print("Ã¹ ÀÔ±İ¾× : ");
+		System.out.print("ì²« ì…ê¸ˆì•¡ : ");
 		int pr = sc.nextInt();
 		
-		System.out.print("¼ºº° : ");
+		System.out.print("ì„±ë³„ : ");
 		char gd = sc.next().charAt(0);
 		
-		System.out.print("³ªÀÌ : ");
+		System.out.print("ë‚˜ì´ : ");
 		int ag = sc.nextInt();
 		
 		Date d = new Date();
@@ -73,17 +73,17 @@ public class BankManager {
 	}
 	
 	public void bankSearch () {
-		// ÅëÀå °Ë»ö Á¶È¸
+		// í†µì¥ ê²€ìƒ‰ ì¡°íšŒ
 		//SaveAccount sa = new SaveAccount();
-		System.out.print("°Ë»öÇÒ ¿¹±İÁÖ¸í : ");
+		System.out.print("ê²€ìƒ‰í•  ì˜ˆê¸ˆì£¼ëª… : ");
 		String cName = sc.next();
-		//¾Æ·¡ÀÇ ÄÚµå°¡ ¾øÀ¸¸é ÀüÃ¼ ÆÄÀÏ¿¡¼­ ÇØ´ç °í°´ÀÇ Á¤º¸¸¸ Ãâ·ÂÇÔ.
-		System.out.print("°Ë»öÇÒ ÆÄÀÏ¸í : ");
+		//ì•„ë˜ì˜ ì½”ë“œê°€ ì—†ìœ¼ë©´ ì „ì²´ íŒŒì¼ì—ì„œ í•´ë‹¹ ê³ ê°ì˜ ì •ë³´ë§Œ ì¶œë ¥í•¨.
+		System.out.print("ê²€ìƒ‰í•  íŒŒì¼ëª… : ");
 		String conName = sc.next();
 		Properties p = new SaveAccount().bankSearch(conName);
 		//p.list(System.out);
-		//ÀÚ²Ù µÚ¿¡ ... ³ª¿Í¼­ Â¥Áõ³² ±×³É Ãâ·ÂÇÔ.
-		//°³º° Ãâ·ÂÇÏ´Â ¹æ¹ıÀº µÎ °¡Áö. ÀüÃ¼¸ñ·Ï¿¡¼­ Á¶È¸ or ÇØ´ç °í°´ÀÇ ÆÄÀÏ ºÒ·¯¿À±â
+		//ìê¾¸ ë’¤ì— ... ë‚˜ì™€ì„œ ì§œì¦ë‚¨ ê·¸ëƒ¥ ì¶œë ¥í•¨.
+		//ê°œë³„ ì¶œë ¥í•˜ëŠ” ë°©ë²•ì€ ë‘ ê°€ì§€. ì „ì²´ëª©ë¡ì—ì„œ ì¡°íšŒ or í•´ë‹¹ ê³ ê°ì˜ íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 		for(Map.Entry<Object, Object> o : p.entrySet()) {
 			String value = (String)o.getValue();
 			if(value.contains(cName)) {
@@ -93,8 +93,8 @@ public class BankManager {
 	}
 	
 	public void bankAllPrint() {
-		// ÀüÃ¼ ÅëÀåÁ¤º¸ Á¶È¸
-		System.out.println("=== °èÁÂ ÀüÃ¼ ¸ñ·Ï ===");
+		// ì „ì²´ í†µì¥ì •ë³´ ì¡°íšŒ
+		System.out.println("=== ê³„ì¢Œ ì „ì²´ ëª©ë¡ ===");
 		//SaveAccount sa = new SaveAccount();
 		Properties p = new SaveAccount().allPrint();
 		//p.list(System.out);
@@ -105,15 +105,15 @@ public class BankManager {
 	}
 	
 	public void bankDeposit() {
-		//ÀÔ±İ
-		System.out.print("ÀÔ±İ ±İ¾× : ");
+		//ì…ê¸ˆ
+		System.out.print("ì…ê¸ˆ ê¸ˆì•¡ : ");
 		int money = sc.nextInt();
 		
-		System.out.print("ÀÔ±İ°í°´ °íÀ¯¹øÈ£ : ");
-		//String absoluteKey = n + sc.next(); °èÁÂ¹øÈ£°¡ keyÀÏ °æ¿ì
+		System.out.print("ì…ê¸ˆê³ ê° ê³ ìœ ë²ˆí˜¸ : ");
+		//String absoluteKey = n + sc.next(); ê³„ì¢Œë²ˆí˜¸ê°€ keyì¼ ê²½ìš°
 		String absoluteKey = sc.next();
 		
-		System.out.print("ºÒ·¯¿Ã ÆÄÀÏ¸í : ");
+		System.out.print("ë¶ˆëŸ¬ì˜¬ íŒŒì¼ëª… : ");
 		String fn = sc.next();
 		Properties p = new SaveAccount().bankSearch(fn);
 
@@ -123,10 +123,10 @@ public class BankManager {
 			map.put(key, p.getProperty(key));	
 			String []values = (String[]) map.values().toArray(new String[map.size()]);
 			String []sar = values[0].split("\\s");
-			//if(absoluteKey.equals(sar[2])) { °èÁÂ¹øÈ£°¡ keyÀÏ °æ¿ì
+			//if(absoluteKey.equals(sar[2])) { ê³„ì¢Œë²ˆí˜¸ê°€ keyì¼ ê²½ìš°
 			if(absoluteKey.equals(key)) {
 				for(String w : sar) {
-					System.out.println(money + "¿ø ÀÔ±İÇÏ¼Ì½À´Ï´Ù.");
+					System.out.println(money + "ì› ì…ê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤.");
 					String str = sar[8].replaceAll(",", "");
 					int x = Integer.parseInt(str) + money;
 				    
@@ -134,7 +134,7 @@ public class BankManager {
 					int keyies = Integer.parseInt(absoluteKey);
 					
 					bStart.setPrice(x);
-					bStart = new Bank(keyies, sar[5], bStart.getGender(), bStart.getGender(),sar[5], x, new Date());
+					bStart = new Bank(keyies, sar[5], bStart.getGender(), bStart.getAge(),sar[2], x, new Date());
 					new SaveAccount().saveAcc(bStart);
 					break;
 				}
@@ -144,15 +144,15 @@ public class BankManager {
 	}
 	
 	public void bankWithdrawal() {
-		//Ãâ±İ
-		System.out.print("Ãâ±İ ±İ¾× : ");
+		//ì¶œê¸ˆ
+		System.out.print("ì¶œê¸ˆ ê¸ˆì•¡ : ");
 		int money = sc.nextInt();
 		
-		System.out.print("Ãâ±İ°í°´ °íÀ¯¹øÈ£  : ");
-		//String absoluteKey = n + sc.next(); °èÁÂ¹øÈ£°¡ keyÀÏ °æ¿ì
+		System.out.print("ì¶œê¸ˆê³ ê° ê³ ìœ ë²ˆí˜¸  : ");
+		//String absoluteKey = n + sc.next(); ê³„ì¢Œë²ˆí˜¸ê°€ keyì¼ ê²½ìš°
 		String absoluteKey = sc.next();
 		
-		System.out.print("ºÒ·¯¿Ã ÆÄÀÏ¸í : ");
+		System.out.print("ë¶ˆëŸ¬ì˜¬ íŒŒì¼ëª… : ");
 		String fn = sc.next();
 		Properties p = new SaveAccount().bankSearch(fn);
 
@@ -163,10 +163,10 @@ public class BankManager {
 			String []values = (String[]) map.values().toArray(new String[map.size()]);
 			String []sar = values[0].split("\\s");
 		
-			//if(absoluteKey.equals(sar[2])) { °èÁÂ¹øÈ£°¡ keyÀÏ °æ¿ì
+			//if(absoluteKey.equals(sar[2])) { ê³„ì¢Œë²ˆí˜¸ê°€ keyì¼ ê²½ìš°
 			if(absoluteKey.equals(key)) {
 				for(String w : sar) {
-					System.out.println(money + "¿ø Ãâ±İÇÏ¼Ì½À´Ï´Ù.");
+					System.out.println(money + "ì› ì¶œê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤.");
 					String str = sar[8].replaceAll(",", "");
 					int x = Integer.parseInt(str) - money;
 				    
@@ -174,7 +174,7 @@ public class BankManager {
 					int keyies = Integer.parseInt(absoluteKey);
 					
 					bStart.setPrice(x);
-					bStart = new Bank(keyies, sar[5], bStart.getGender(), bStart.getGender(),sar[5], x, new Date());
+					bStart = new Bank(keyies, sar[5], bStart.getGender(), bStart.getAge(),sar[2], x, new Date());
 					new SaveAccount().saveAcc(bStart);
 					break;
 				}
@@ -183,6 +183,6 @@ public class BankManager {
 	}
 	
 	public void bankAccTransfer() {
-		//°èÁÂÀÌÃ¼
+		//ê³„ì¢Œì´ì²´
 	}
 }
