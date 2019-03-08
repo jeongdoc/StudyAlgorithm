@@ -9,9 +9,9 @@ public class BOJ2441244024392439 {
 				/* 
 				 		*****
 				 		 ****
-				          ***
-				   	       **
-				   	        *
+				         	  ***
+				   	           **
+				   	            *
 				*/
 				int star = new Scanner(System.in).nextInt();
 				for(int i = 1; i <= star; i ++) {
@@ -41,7 +41,7 @@ public class BOJ2441244024392439 {
 				
 				//boj2439
 				/*
-				 			*
+				 		    *
 				 		   **
 				 		  ***
 				 		 ****
@@ -58,7 +58,7 @@ public class BOJ2441244024392439 {
 				}
 				//boj2439
 				/*
-				 	    *
+				 	        *
 				 		**
 				 		***
 				 		****
