@@ -1,4 +1,4 @@
-java.util.Array;
+java.util.Arrays;
 class Programmers_hash1 {
     public String solution(String[] participant, String[] completion) {
         Arrays.sort(participant);
