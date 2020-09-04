@@ -11,6 +11,7 @@ public class Day456_Run {
 		int []a = boom456.deArray();
 		System.out.println();
 		int p = Day456_Questions.sumOf(a);
+    
 		System.out.println("a[]의 합계  : " + p);
 
 	}
