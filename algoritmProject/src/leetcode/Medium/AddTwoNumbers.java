@@ -27,7 +27,7 @@ public class AddTwoNumbers {
 		AddTwoNumbers result = addTwoNumbers(l1, l2);
 		
 		while(result != null) {
-			System.out.println("result => " + result.val);
+			System.out.println(result.val);
 			result = result.next;
 		}
 		
