@@ -13,10 +13,12 @@ class LeetCodeMedium {
 //		s2.nonRepeatingString("bbbbb");
 		LongestSubstringWithoutRepeatingCharacters s3 = new LongestSubstringWithoutRepeatingCharacters();
 		s3.nonRepeatingString("pwwkew");
+		//s3.nonRepeatingString("bbbbb");
+//		s3.nonRepeatingString("4467");
 //		LongestSubstringWithoutRepeatingCharacters s4 = new LongestSubstringWithoutRepeatingCharacters(12);
 //		s4.nonRepeatingString("4467fgagfg2234");
 //		LongestSubstringWithoutRepeatingCharacters s5 = new LongestSubstringWithoutRepeatingCharacters(4);
-//		s5.nonRepeatingString("4467");
+		//s3.nonRepeatingString("4467");
 	}
 
 }

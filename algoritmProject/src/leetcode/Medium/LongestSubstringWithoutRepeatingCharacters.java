@@ -18,17 +18,18 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	public int find(int i) {
 		//System.out.println(i);
 		int count = 0;
+		//int sum = 0;
 		while(i != car[i]) {
-			//System.out.println(car[i]);
 			car[i] = car[car[i]];
+			//System.out.println("1 => " + car[i]);
 			i = car[i];
 			//i = car[i];
 			//System.out.println("i => " + i);
-			//System.out.println(i);
+			//System.out.println(car[i]);
 			//count ++;
 			//System.out.println(count);
 		}
-		//System.out.println(i);
+		
 		
 		return i;
 	}
@@ -38,11 +39,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	}
 	
 	public void connecting(int x, int y) {
-		//System.out.println(x + ", " + y);
 		int i = find(x);
 		int j = find(y);
+		System.out.println(i + ", " + j);
 		car[i] = j;
-		//System.out.println(j);
+		//System.out.println(car[98]);
 	}
 
 	public int nonRepeatingString(String s) {
@@ -59,21 +60,24 @@ public class LongestSubstringWithoutRepeatingCharacters {
 			car[i] = i;
 		}
 		
-		for(int i = 0; i < len -1; i ++) {
-			//System.out.println(arr[i]);
-			connecting(arr[i], arr[i+1]);
-			int temp = find(arr[i]);
-			int temp2 = find(arr[i+1]);
-			//System.out.println(car[temp]);
+		int min = 0;
+		int temp = 0;
+		int y = 0;
+		for(int i = 0; i < len; i ++) {
 			
-			//System.out.println(isTree(find(arr[i]), find(arr[i +1])));
-			//System.out.println(temp + ", " + car[temp]);
+			temp = arr[i];
+			//System.out.println(temp);
 			
-			//System.out.println(isTree(i, i+1));
+			System.out.println(car[temp]);
 			
-			System.out.println(temp + ", " + temp2);
+			
+			
+			//int temp = arr[i];
+			//System.out.println(temp);
 		}
-	//	System.out.println(result);
+		//System.out.println(isTree(112, 107));
+		//System.out.println(min);
+		//System.out.println(max);
 		
 		return result;
 	}
