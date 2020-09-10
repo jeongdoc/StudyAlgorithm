@@ -3,40 +3,39 @@ package leetcode.easy;
 public class CountAndSay {
 	
 	public String countAndSay(int n) {
-		String input = "1";
+		// LeetCode Easy 38
 		
-		// 312211
-		return say(input, n);
+		// Runtime : 1ms, faster than 94.94% of Java Online submissions for Count and Say
+		// Memory Usage : 36.7mb, less then 87.25% of Java Online submissions for Count and Say
+		
+		return readString(n);
 	}
 	
-	private String say(String input, int n) {
-		String result = input;
+	private String readString(int n) {
 		if(n == 1) return "1";
 		
-		char[] car = result.toCharArray();
-		char first = car[0];
-		int count = 1;
+		String me = countAndSay(n -1);
+		StringBuilder builder = new StringBuilder();
 		
-		for(int i = 1; i < n; i ++) {
-			
-			for(int j = 1; j < result.length(); j ++) {
-				if(first == car[j]) {
-					count ++;
-				} else {
-					System.out.println(count + ", " + result);
-					result += count;
-					result += car[j];
-					
-					//first = car[j];
-					count = 1;
-				}
+		char[] chr = me.toCharArray();
+		char val = chr[0];
+		int count = 0;
+		
+		for(int i = 0; i < chr.length; i ++) {
+			if(chr[i] == val) {
+				count ++;
+			} else {
+				builder.append(count);
+				builder.append(val);
+				
+				count = 1;
+				val = chr[i];
 			}
-			System.out.println(i);
 		}
-		result += count;
-		System.out.println("result => " + result);
+		builder.append(count);
+		builder.append(val);
 		
-		return result;
+		return builder.toString();
 	}
 	
 	
