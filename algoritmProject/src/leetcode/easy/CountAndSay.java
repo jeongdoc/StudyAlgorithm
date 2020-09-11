@@ -14,6 +14,9 @@ public class CountAndSay {
 	private String readString(int n) {
 		if(n == 1) return "1";
 		
+		String str = "12345";
+		System.out.println(str.substring(0, 1));
+		
 		String me = countAndSay(n -1);
 		StringBuilder builder = new StringBuilder();
 		
