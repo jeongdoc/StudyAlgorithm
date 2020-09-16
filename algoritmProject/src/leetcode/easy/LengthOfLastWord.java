@@ -9,11 +9,20 @@ public class LengthOfLastWord {
 //		int len = str.length;
 //		
 //		result = len > 0 ? str[len -1].length() : 0;
+//		split은 1ms
 		
-		for(int i = 0; i < s.length(); i ++) {
-			
+		char[] car = s.toCharArray();
+		int idx = car.length -1;
+		while(idx > -1 && car[idx] == ' ') {
+			idx --;
 		}
 		
+		while(idx > -1 && car[idx] != ' ') {
+			result ++;
+			idx --;
+		}
+		// Runtime : 0ms, faster than 100.00% of Java online submissions for Length of Last Word.
+		// Memory Usage : 37.2mb, less than 97.28% of Java online submissions for Length of Last Word.
 		
 		return result;
 	}

@@ -11,7 +11,7 @@ class LeetCodeEasy {
 	@Test
 	void test() {
 		LengthOfLastWord l = new LengthOfLastWord();
-		String s = "hello world";
+		String s = "a aa avv ";
 		l.wordLength(s);
 	}
 
