@@ -4,15 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.easy.LengthOfLastWord;
+import leetcode.easy.PlusOne;
 
 class LeetCodeEasy {
 
 	@Test
 	void test() {
-		LengthOfLastWord l = new LengthOfLastWord();
-		String s = "a aa avv ";
-		l.wordLength(s);
+		PlusOne p = new PlusOne();
+		int[] digits = {1, 2, 3};
+		
+		p.plusOne(digits);
 	}
 
 }
