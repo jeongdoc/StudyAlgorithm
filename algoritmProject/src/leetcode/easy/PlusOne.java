@@ -2,24 +2,27 @@ package leetcode.easy;
 
 public class PlusOne {
 	
-	public int[] plusOne(int[] digits) {
-		int[] result = {};
+	public int[] plusOne(int[] digits) {		
 		
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < digits.length; i ++) {
-			sb.append(digits[i]);
-		}
-		String num = sb.toString();
-		int number= Integer.parseInt(num) + 1;
-		System.out.println(number);
-		
-		int newNumber = 0;
-		for(int i = 0; i < num.length(); i ++) {
+		int num = 0;
+		int len = digits.length -1;
+		for(int i = len; i > -1 ; i --) {
+			num = (digits[i] + 1) % 10;
+			digits[i] = num;
 			
-			result[i] = 0; 
+			if(num != 0) break;
 		}
-		//System.out.println("re -> " + result[0]);
 		
-		return result;
+		if(num == 0) {
+			int[] temp = new int[digits.length +1];
+			temp[0] = 1;
+			
+			return temp;
+		}
+		
+		// Runtime : 0 ms, faster than 100.00% of Java online submissions for Plus One.
+		// Memory Usage : 37.5mb, less than 98.24% of Java online submissions for Plue One.
+		
+		return digits;
 	}
 }
