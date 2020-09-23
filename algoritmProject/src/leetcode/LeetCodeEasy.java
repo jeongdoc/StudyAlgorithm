@@ -4,16 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.easy.PlusOne;
+import leetcode.easy.AddBinary;
 
 class LeetCodeEasy {
 
 	@Test
 	void test() {
-		PlusOne p = new PlusOne();
-		int[] digits = {9, 8, 7, 6, 5, 4, 4, 3, 2, 1, 0};
+		AddBinary ad = new AddBinary();
+		String a = "11";
+		String b = "1";
 		
-		p.plusOne(digits);
+		ad.addBinary(a, b);
 	}
 
 }
