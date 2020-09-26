@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import leetcode.easy.AddBinary;
+import leetcode.easy.SqrtX;
 
 class LeetCodeEasy {
 
 	@Test
 	void test() {
-		AddBinary ad = new AddBinary();
-		String a = "11";
-		String b = "1";
+		SqrtX xx = new SqrtX();
 		
-		ad.addBinary(a, b);
+		int x = 4;
+		xx.sqrt(x);
 	}
 
 }
