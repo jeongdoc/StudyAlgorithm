@@ -4,17 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.easy.AddBinary;
-import leetcode.easy.SqrtX;
+import leetcode.easy.ClimbingStairs;
 
 class LeetCodeEasy {
 
 	@Test
 	void test() {
-		SqrtX xx = new SqrtX();
+		ClimbingStairs c = new ClimbingStairs();
 		
-		int x = 4;
-		xx.sqrt(x);
+		int n = 3;
+		c.climbStairs(n);
 	}
 
 }
