@@ -24,7 +24,7 @@ public class Question1 {
 		int firstMax = 0;
 		for(int i = 0; i < land.length -1; i ++) {
 			for(int j = 0; j < land[i].length; j ++) {
-				firstMax = Math.max(0, land[0][j]);
+				firstMax = Math.max(0, land[0][j]); 
 				max = landMaximum(land[i +1], j);
 				
 			}
