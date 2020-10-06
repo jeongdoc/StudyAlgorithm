@@ -10,7 +10,7 @@ class LeetCodeMedium {
 		LongestPalindromicSubString l = new LongestPalindromicSubString();
 		String s = "babad";
 		
-		l.longestSubstring(s);
+		l.longestSubstring(s);  
 	}
 
 }
