@@ -15,7 +15,7 @@ public class SameTree {
 
 	public boolean isSameTree(SameTree p, SameTree q) {
 		
-		System.out.println(p.left.val);
+		System.out.println(p.left.val);  
 		System.out.println(p.right.val);
 		
 		return false;
