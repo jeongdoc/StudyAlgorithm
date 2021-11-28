@@ -5,7 +5,7 @@
 * Sources of Problems    
   - Baekjoon    
   - Programmers    
-  - LeetCode (Most frequent)   
+  - LeetCode
   
  
  
