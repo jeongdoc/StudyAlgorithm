@@ -10,7 +10,7 @@ var convertToTitle = function(columnNumber) {
     // columnNumber = 2147483647;
     // columnNumber = 701;
     // columnNumber = 1;
-    columnNumber = 52;
+    columnNumber = 77;
 
     let remain = 0;
     const charcode = [];
@@ -45,7 +45,7 @@ var convertToTitle2 = function(columnNumber) {
     // columnNumber = 2147483647;
     // columnNumber = 701;
     // columnNumber = 1;
-    columnNumber = 52;
+    columnNumber = 77;
 
     let remain = 0;
     const charcode = [];
