@@ -20,46 +20,24 @@
  * @return {number}
  */
 
-const sequentialSearch = (arr, len, data, profit) => {
-    for(let i = 0; i < len; i ++) {
-        if(data - arr[i] < profit) {
-            return data - arr[i]
-        }
-    }
-    return profit;
+const compare = (a, b) => {
+    return a < b ? a : b;
 }
 
- var maxProfit = function(prices) {
-
-    prices = [7,6,4,3,1]
-
-    let profit = 0;
-
+var maxProfit = function(prices) {
     
+    prices = [7,1,5,3,6,4];
+    if(prices.length < 2) return 0;
 
-    return profit;
+    let minBuy = prices[0];
+    let profit = 0;
+    for(let i = 1; i < prices.length; i++) {
 
-    // prices = [5];
+        minBuy = compare(prices[i], minBuy);
+        profit = compare(minBuy - prices[i], profit);
 
-    // if(prices.length < 2) return 0;    
-
-    // let profit = 0;
-    // const recursion = (arr) => {
-
-    //     let buy = arr[0];
-    //     for(let i = 1; i < arr.length; i ++) {
-    //         const daliyProfit = cal(buy, arr[i]);
-    //         if(daliyProfit < profit) {
-    //             profit = daliyProfit;
-    //         }
-    //     }
-    //     arr.splice(0, 1);
-        
-    //     return arr.length === 1 ? profit : recursion(arr);
-    // }
-
-    // recursion(prices);
-
-    // return profit*-1;
+    }
+    return -profit;
 };
+
 console.log(maxProfit(0));
