@@ -1,13 +1,7 @@
-// Queue는 O(1)
-var Node = function(value) {
-    this.value = null;
-    this.next = null;
-}
-
+// [challenges] 232. Implement Queue using Stacks
+// Need to concern a Time complexity the Queue
 var MyQueue = function() {
-    this.front = null;
-    this.rear = null;  
-    this.size = 0;
+    this.myStack = [];
 };
 
 /** 
@@ -15,51 +9,50 @@ var MyQueue = function() {
  * @return {void}
  */
 MyQueue.prototype.push = function(x) {
-    const node = new Node(x);
-    if(this.size === 0) {
-        this.front = node;
-        this.rear = node;
-    } else {
-        this.rear.next = node;
-        this.rear = node;
-    }
-
-    this.size++;
+    this.myStack.push(x);
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.pop = function() {
-    
+    let temp = [];
+
+    while(this.myStack.length > 1) {
+        temp.push(this.myStack.pop());
+    }
+
+    let x = this.myStack.pop();
+    while(temp.length > 0) {
+        this.myStack.push(temp.pop());
+    }
+
+    return x;
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.peek = function() {
-    if(this.size === 0) return null;
+    if(this.myStack.length === 0) return null;
 
-    return this.front.value;
+    return this.myStack[0];
 };
 
 /**
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-    return this.size === 0;
+    return this.myStack.length === 0;
 };
 
 const Main = () => {
-    // var obj = new MyQueue();
-    let test = new Array();
     var obj = new MyQueue();
-    obj.push(1);
-    obj.push(2);
-    console.log(obj);
-    console.log(obj.pop());
-    console.log(obj.peek());
-    console.log(obj.empty());
+    obj.push(1);                // queue [1]
+    obj.push(2);                // queue [1, 2]
+    console.log(obj.peek());    // return 1
+    console.log(obj.pop());     // return 1, queue [2]
+    console.log(obj.empty());   // return false
 }
 
 Main();
